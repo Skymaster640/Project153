@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+        <script src="./components/Rotation.js"></script>
+    </head>
+
+    <body>
+        <a-scene background="color:#026F90">
+            <a-entity id="look" look-controls camera position="0 2 20"></a-entity>
+
+
+            <a-assets timeout="10000">
+                <a-asset-item
+                id="fish"
+                src = "assets/fish/scene.gltf">
+                </a-asset-item>
+
+                <a-asset-item
+                id="scubaman"
+                src = "assets/scuba_diver/scene.gltf">
+                </a-asset-item>
+
+                
+
+                <a-asset-item
+                id="turtle"
+                src = "assets/turtle/scene.gltf">
+                </a-asset-item>
+
+                <a-asset-item
+                id="treasure"
+                src = "assets/treasure/model.gltf">
+                </a-asset-item>
+
+                <a-asset-item
+                id="islandmap"
+                src = "assets/island/scene.gltf">
+                </a-asset-item>
+            </a-assets>
+
+            <a-entity
+            id="island"
+            position = "0 -3 -20"
+            rotation = "0 0 0"
+            gltf-model = "#islandmap"
+            animation = "property:position;to:0 0 100;easing:linear;loop:true;dur:150000"
+            terrain-rotation-reader>
+
+            <a-entity
+            id="chest1"
+            position = "0 -6.5 10"
+            rotation = "0 40 0"
+            scale = "5 5 5"
+            gltf-model = "#treasure"
+            terrain-rotation-reader>
+
+            </a-entity>
+
+            <a-entity
+            id="chest2"
+            position = "-10 -6.5 10"
+            rotation = "0 70 0"
+            scale = "5 5 5"
+            gltf-model = "#treasure"
+            terrain-rotation-reader>
+
+            </a-entity>
+
+            </a-entity>
+
+
+
+            <a-entity
+            id="scubaguy"
+            position = "6 -8 15"
+            rotation = "0 100 0"
+            gltf-model = "#scubaman"
+            scale = "0.1 0.1 0.1">
+
+            </a-entity>
+
+        </a-scene>
+    </body>
+</html>
