@@ -1,0 +1,5 @@
+Hi. Now, if you try to load up this project. I'm pretty sure that it won't work because, as you may see.
+The scuba diver is not in the project. That is because Github will not let the repository create with
+the scuba diver's scene.bin file. So I hope that you may at least, look at the code to see if it is
+acceptable. And if you want to take the long way, import the model on your own end to see if it works.
+I also did not put in the fish or turtle models as they were not used in the project, but it still might not work without the models.
